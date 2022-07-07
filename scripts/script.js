@@ -38,13 +38,43 @@ console.log(multiply(4, 7));
 
 ////Adding image changer
 
-let myImage = document.querySelector('img');
+// let myImage = document.querySelector('img');
 
-myImage.onclick = function() {
-    let mySrc = myImage.getAttribute('src');
-    if(mySrc === 'images/img1.png') {
-        myImage.setAttribute('src', 'images/img2.png');
+// myImage.onclick = function() {
+//     let mySrc = myImage.getAttribute('src');
+//     if(mySrc === 'images/img1.png') {
+//         myImage.setAttribute('src', 'images/img2.png');
+//     } else {
+//         myImage.setAttribute('src', 'images/img1.png')
+//     }
+// }
+
+// let myButton = document.querySelector('button');
+// function setUserName() {
+//     let myName = prompt('Please enter your name.');
+//     localStorage.setItem('name', myName);
+//     myHeading.textContent = 'Javascript is cool, ' + myName;
+// }
+// if(!localStorage.getItem('name')) {
+//     setUserName();
+// } else {
+//     let storedName = localStorage.getItem('name');
+//     myHeading.textContent = 'Javascript is cool, ' + storedName;
+// }
+
+const btn = document.querySelector('button');
+const txt = document.querySelector('p');
+
+
+btn.addEventListener('click', updateBtn);
+
+function updateBtn() {
+    if (btn.textContent === 'Startmachine') {
+        btn.textContent = 'Stop machine';
+        txt.textContent = 'The machine has started';
     } else {
-        myImage.setAttribute('src', 'images/img1.png')
+        btn.textContent = 'Start machine';
+        txt.textContent = 'The machine is stopped';
+
     }
 }
