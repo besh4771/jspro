@@ -78,3 +78,7 @@ function updateBtn() {
 
     }
 }
+
+
+const name = "VictorJames"
+console.log(`the owner of that range rover sports is ${name}`);
